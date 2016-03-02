@@ -1,0 +1,43 @@
+<h3>Let's add details of new restaurant !!</h3>
+
+<form name="myForm" ng-app="" ng-init="myText = 'post@myweb.com'">
+	<fieldset>
+		<label>Restaurant Name</label>
+		<input type="text"></input>
+	</fieldset>
+	<fieldset>
+		<label>Owned By</label>
+		<input type="text"></input>
+	</fieldset>
+	<fieldset>
+		<label>Official Email</label>
+		<input type="email" name="myAddress" ng-model="myText" required></input>
+		{{myForm.myAddress.$valid}}
+	    {{myForm.myAddress.$dirty}}
+	    {{myForm.myAddress.$touched}}
+	</fieldset>
+	<fieldset>
+		<label>Restaurant Address</label>
+		<textarea></textarea>
+	</fieldset>
+	<fieldset>
+		<label>Restaurant Products</label>
+		<input type="radio">Beer Only</input>
+		<input type="radio">All (Drinks + Food)</input>
+		<input type="radio">Food Only</input>
+	</fieldset>
+	<fieldset>
+		<label>Restaurant Rating (Ambience + Price)</label>
+		<select>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		<input type="button" value="Reset"></input>
+		<input type="submit" value="Add to List"></input>
+	</fieldset>
+</form>

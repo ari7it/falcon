@@ -1,0 +1,28 @@
+<form>
+  <h2>Login Credentials</h2>
+  
+  <section>
+    
+    <p>
+      <label for="name">
+        <span>Login ID: </span>
+        <input type="text" id="name" name="username" required ng-model="formData.userid" autocomplete="off" /> 
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+    </p>
+    
+     <p>
+      <label for="password">
+        <span>Password: </span>
+        <input type="password" id="password" name="password" required ng-model="formData.password" /> 
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+    </p>
+  </section>
+
+  <section>
+    <p>
+      <input type="submit" value="Validate" ng-click="validate(formData.userid,formData.password)" />
+    </p>
+  </section>
+</form>

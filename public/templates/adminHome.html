@@ -1,0 +1,41 @@
+<a href="javascript:void(0)" ng-click="signOut()">Signout</a>
+<div class="logg-in-section">
+			<h1>Welcome Admin <span class="label label-info">{{ adminName }}</span></h1>
+			
+			<aside>
+				<ul class="categoryGrp">
+					<li class="category">
+						<a href="javascript:void(0)">Restaurants</a>
+						<ul>
+							<li><button ng-click="restaurant('addRest')">Add Restaurants</button></li>
+							<li><button ng-click="restaurant('viewRest')">View Restaurants</button></li>
+							<li><button ng-click="restaurant('delRest')">Delete Restaurants</button></li>
+						</ul>
+					</li>
+					<li class="category">
+						<a href="javascript:void(0)">Deal</a>
+						<ul>
+							<li><button>Add Deal</button></li>
+							<li><button>View Deal</button></li>
+							<li><button>Delete Deal</button></li>
+						</ul>
+					</li>
+					<li class="category">
+						<a href="javascript:void(0)">Bookings</a>
+						<ul>
+							<li><button>View Bookings</button></li>
+						</ul>
+					</li>
+					<li class="category">
+						<a href="javascript:void(0)">Users</a>
+						<ul>
+							<li><button>View Registered Users</button></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			<section >
+				<!-- <ng-include src="template"></ng-include> -->
+				<p>loaded data</p>
+			</section>
+</div>

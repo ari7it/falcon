@@ -1,0 +1,58 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="adminApp">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+    <title>Admin Page</title>
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="css/admin.css"><!-- load bootstrap -->
+    <!-- SPELLS -->
+	<script src="js/plugins/jquery.min.js"></script><!-- load jquery -->
+	<script src="js/plugins/bootstrap.min.js"></script>
+    <script src="js/plugins/angular.min.js"></script><!-- load angular -->
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.js"></script>
+
+
+    <script src="js/core.js"></script> <!-- load our main application -->
+
+	<script src="js/services/admin.service.js"></script> 
+	
+	
+	 
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<body >
+    <div class="container">
+
+        <!-- HEADER AND TODO COUNT -->
+        <div class="jumbotron text-center" ng-show="!logged">
+            <h1>Welcome to Admin page</h1>
+			
+			<!-- TODO LIST -->
+			<div id="todo-list" class="row">
+				
+				<p ng-show="errpassword">Please check your Username/password combination!</p>
+				<p ng-show="errusername">No account found with this User ID</p>
+				<login-form></login-form>
+				
+			</div>
+
+        </div>
+
+        <div class="logged-in-screen" ng-show="logged" >
+			<logged></logged>
+		</div>
+        
+
+    </div>
+    
+    <!-- <script src="js/controllers/admin.controller.js"></script> -->
+	<script src="js/directives/admin.directive.js"></script>
+	
+</body>
+</html>
